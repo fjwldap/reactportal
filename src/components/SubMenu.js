@@ -25,23 +25,19 @@ function SubMenu(props) {
                         <div className="area">
                             <ul className="m_gab01">
                                 <li>
-                                    <span onClick={() => moveTo('')} > 계약 신청 </span>
+                                    <span> 계약 신청 </span>
                                 </li>
-                                <li>
-                                    <a href={() => false} onClick={() => moveTo('')}>목록</a>
+                                <li onClick={() => moveTo('')}>목록
                                 </li>
-                                <li>
-                                    <a href={() => false} onClick={() => moveTo('')}> 신청</a>
+                                <li onClick={() => moveTo('')}> 신청
                                 </li>
                             </ul>
                             <ul>
                                 <li>
                                     <span onClick={() => moveTo('')}>계약 목록</span>
                                 </li>
-                                <li>
-                                    <a href={() => false} onClick={() => moveTo('')}>
-                                        목록
-                                    </a>
+                                <li onClick={() => moveTo('')}>
+                                    목록
                                 </li>
                             </ul>
 
@@ -50,10 +46,9 @@ function SubMenu(props) {
                         <div className="area">
                             <ul className="m_gab02">
                                 <li>
-                                    <span onClick={() => moveTo('')}>계약 신청 관리</span>
+                                    <span >계약 신청 관리</span>
                                 </li>
-                                <li>
-                                    <a href={() => false} onClick={() => moveTo('contmgtlist')}> 인터넷 신청 관리 </a>
+                                <li onClick={() => moveTo('contmgtlist')}> 인터넷 신청 관리
                                 </li>
                             </ul>
                         </div>

@@ -1,11 +1,11 @@
+import { useState } from 'react';
 import SelectBoxComponent from "../CommonComponents/SelectBoxComponent";
 
 function ContMgtSearchArea(props) {
-    const selectedTlkPerd = 1;
+    const [selectedDivCd, setSelectedDivCd] = useState('');
+    const [selectedSttusCd, setSelectedSttusCd] = useState('');
+    const [selectedTlkPerd, setSelectedTlkPerd] = useState(1);
 
-    function selectTlkPerd(num) {
-        console.log(num);
-    }
 
     return (
         <div className="search_area">
@@ -14,12 +14,15 @@ function ContMgtSearchArea(props) {
                     <ul>
                         <li className="title01">계약 구분</li>
                         <li>
-                            <SelectBoxComponent value={'asdf'} selectClass={'select_input'} width={180} />
+                            <SelectBoxComponent value={selectedDivCd} getData={setSelectedDivCd} selectClass={'select_input'} width={240} />
+                            {selectedDivCd}
                         </li>
                     </ul>
                     <ul>
                         <li className="title01_col">계약 상태</li>
                         <li>
+                            <SelectBoxComponent value={selectedSttusCd} getData={setSelectedSttusCd} selectClass={'select_input'} width={280} />
+                            {selectedSttusCd}
                         </li>
                     </ul>
                 </div>
@@ -37,7 +40,7 @@ function ContMgtSearchArea(props) {
                             <button
                                 type="button"
                                 style={{ width: 82 }}
-                                onClick={() => selectTlkPerd(1)}
+                                onClick={() => setSelectedTlkPerd(1)}
                                 className={selectedTlkPerd === 1 ? 'button_tab_hover button_tab01' : 'button_tab01'}
                             >
                                 당월
@@ -45,7 +48,7 @@ function ContMgtSearchArea(props) {
                             <button
                                 type="button"
                                 style={{ width: 82 }}
-                                onClick={() => selectTlkPerd(2)}
+                                onClick={() => setSelectedTlkPerd(2)}
                                 className={selectedTlkPerd === 2 ? 'button_tab_hover button_tab03 tab_size02' : 'button_tab03 tab_size02'}
                             >
                                 전월
@@ -71,6 +74,7 @@ function ContMgtSearchArea(props) {
                 <button type="button" className="button_03"></button>
                 {/* </a> */}
             </div>
+            {selectedDivCd} {selectedSttusCd} {selectedTlkPerd}
         </div >
     );
 }
