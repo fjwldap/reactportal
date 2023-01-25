@@ -11,6 +11,7 @@ function SubMenu(props) {
 
     function moveTo(str) {
         navigate(str);
+        setSubMenuNo(0);
     }
 
     function hideSubMenu() {

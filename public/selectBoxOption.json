@@ -1,0 +1,217 @@
+{
+    "optionsSearchDiv": [
+        {
+            "cdNm": "선택",
+            "cdEnglNm": "Select",
+            "cdJpnNm": "選択",
+            "value": ""
+        },
+        {
+            "cdNm": "명의고객명",
+            "cdEnglNm": "명의고객명",
+            "cdJpnNm": "명의고객명",
+            "value": "01",
+            "show": false
+        },
+        {
+            "cdNm": "납부고객명",
+            "cdEnglNm": "납부고객명",
+            "cdJpnNm": "납부고객명",
+            "value": "02",
+            "show": false
+        },
+        {
+            "cdNm": "계약 ID",
+            "cdEnglNm": "Subscribe ID",
+            "cdJpnNm": "申込みID",
+            "value": "03"
+        },
+        {
+            "cdNm": "청구계정 ID",
+            "cdEnglNm": "Payment Account ID",
+            "cdJpnNm": "納付アカウント ID",
+            "value": "04"
+        },
+        {
+            "cdNm": "선박/항공/육상 ID",
+            "cdEnglNm": "vessel / aircraft / land mobile ID",
+            "cdJpnNm": "vessel / aircraft / land mobile ID",
+            "value": "05"
+        },
+        {
+            "cdNm": "선박명",
+            "cdEnglNm": "vessel name",
+            "cdJpnNm": "船名",
+            "value": "06"
+        },
+        {
+            "cdNm": "MSISDN,IMN",
+            "cdEnglNm": "MSISDN,IMN",
+            "cdJpnNm": "MSISDN,IMN",
+            "value": "07"
+        },
+        {
+            "cdNm": "IMSI",
+            "cdEnglNm": "IMSI",
+            "cdJpnNm": "IMSI",
+            "value": "08"
+        },
+        {
+            "cdNm": "IMEI",
+            "cdEnglNm": "IMEI",
+            "cdJpnNm": "IMEI",
+            "value": "09"
+        },
+        {
+            "cdNm": "시리얼번호",
+            "cdEnglNm": "S/N",
+            "cdJpnNm": "S/N",
+            "value": "10"
+        },
+        {
+            "cdNm": "ICC ID",
+            "cdEnglNm": "ICC ID",
+            "cdJpnNm": "ICC ID",
+            "value": "11"
+        },
+        {
+            "cdNm": "Gateway Account",
+            "cdEnglNm": "Gateway Account",
+            "cdJpnNm": "Gateway Account",
+            "value": "12",
+            "show": false
+        },
+        {
+            "cdNm": "SP ID",
+            "cdEnglNm": "SP ID",
+            "cdJpnNm": "SP ID",
+            "value": "13",
+            "show": false
+        },
+        {
+            "cdNm": "서비스오더번호",
+            "cdEnglNm": "서비스오더번호",
+            "cdJpnNm": "서비스오더번호",
+            "value": "14",
+            "show": false
+        }
+    ],
+    "optionsEngtMons": [
+        {
+            "cdNm": "전체",
+            "cdEnglNm": "All",
+            "cdJpnNm": "全体",
+            "value": ""
+        },
+        {
+            "cdNm": "약정종료 1개월전",
+            "cdEnglNm": "약정종료 1개월전",
+            "cdJpnNm": "약정종료 1개월전",
+            "value": "01"
+        },
+        {
+            "cdNm": "약정종료 2개월전",
+            "cdEnglNm": "약정종료 2개월전",
+            "cdJpnNm": "약정종료 2개월전",
+            "value": "02"
+        },
+        {
+            "cdNm": "약정종료 3개월전",
+            "cdEnglNm": "약정종료 3개월전",
+            "cdJpnNm": "약정종료 3개월전",
+            "value": "03"
+        },
+        {
+            "cdNm": "약정종료 4개월전",
+            "cdEnglNm": "약정종료 4개월전",
+            "cdJpnNm": "약정종료 4개월전",
+            "value": "04"
+        },
+        {
+            "cdNm": "약정종료 5개월전",
+            "cdEnglNm": "약정종료 5개월전",
+            "cdJpnNm": "약정종료 5개월전",
+            "value": "05"
+        },
+        {
+            "cdNm": "약정종료 6개월전",
+            "cdEnglNm": "약정종료 6개월전",
+            "cdJpnNm": "약정종료 6개월전",
+            "value": "06"
+        },
+        {
+            "cdNm": "약정만료",
+            "cdEnglNm": "약정만료",
+            "cdJpnNm": "약정만료",
+            "value": "07"
+        }
+    ],
+    "optionsOrdrType": [
+        {
+            "cdNm": "신청일",
+            "cdEnglNm": "Application Date",
+            "cdJpnNm": "申請日",
+            "value": "ordrDt"
+        },
+        {
+            "cdNm": "발행일",
+            "cdEnglNm": "Issuing Date",
+            "cdJpnNm": "発行日",
+            "value": "ofwDt"
+        }
+    ],
+    "optionsRepl": [
+        {
+            "cdNm": "댓글여부",
+            "cdEnglNm": "댓글여부",
+            "cdJpnNm": "댓글여부",
+            "value": ""
+        },
+        {
+            "cdNm": "Y",
+            "cdEnglNm": "Y",
+            "cdJpnNm": "Y",
+            "value": true
+        },
+        {
+            "cdNm": "N",
+            "cdEnglNm": "N",
+            "cdJpnNm": "N",
+            "value": false
+        }
+    ],
+    "optionsDel": [
+        {
+            "cdNm": "전체",
+            "cdEnglNm": "All",
+            "cdJpnNm": "全体",
+            "value": ""
+        },
+        {
+            "cdNm": "삭제",
+            "cdEnglNm": "삭제",
+            "cdJpnNm": "삭제",
+            "value": true
+        },
+        {
+            "cdNm": "미삭제",
+            "cdEnglNm": "미삭제",
+            "cdJpnNm": "미삭제",
+            "value": false
+        }
+    ],
+    "optionsIifhl": [
+        {
+            "cdNm": "2022년 08월 04일 (현재)",
+            "cdEnglNm": "2022년 08월 04일 (현재)",
+            "cdJpnNm": "2022년 08월 04일 (현재)",
+            "value": "20220804"
+        },
+        {
+            "cdNm": "2022년 07월 25일 (이전)",
+            "cdEnglNm": "2022년 07월 25일 (이전)",
+            "cdJpnNm": "2022년 07월 25일 (이전)",
+            "value": "20220725"
+        }
+    ]
+}
