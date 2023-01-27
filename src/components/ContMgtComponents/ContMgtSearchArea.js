@@ -15,7 +15,15 @@ function ContMgtSearchArea(props) {
     }
 
     function getSearchData() {
-        console.log(selectedDivCd, selectedSttusCd, selectedTlkPerd, contApyNo, startDate, endDate);
+        // console.log(selectedDivCd, selectedSttusCd, selectedTlkPerd, contApyNo, startDate, endDate);
+        var searchData = {
+            "selectedDivCd": selectedDivCd,
+            "selectedSttusCd": selectedSttusCd,
+            "contApyNo": contApyNo,
+            "startDate": startDate,
+            "endDate": endDate,
+        };
+        props.getSearchData(searchData);//검색조건 object로 전달
     }
 
     function setMonth(val) {

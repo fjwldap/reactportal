@@ -283,7 +283,7 @@ section {
   padding: 40px 0 143px;
   box-sizing: border-box;
 }
-section > div.warp {
+section > div.wrap {
   width: 1323px;
   margin: 0 auto;
   padding-bottom: 10px;
@@ -996,7 +996,7 @@ span.red {
 
 .ag-grid .ag-header {
   background-color: #f8f8f8;
-  border-bottom: #e4e4e4 solid 1px;
+  /* border-bottom: #e4e4e4 solid 1px; */
   box-sizing: border-box;
 }
 
@@ -1099,7 +1099,7 @@ span.red {
 }
 
 .ag-grid .ag-cell-label-container {
-  width: auto;
+  /* width: auto; */
 }
 
 .ag-grid .ag-cell-left {
