@@ -21,7 +21,7 @@ function Header(props) {
         <header>
             <div id="brand">
                 <div className="gap">
-                    <img src={require("../img/logo_main.png")} onClick={() => moveToMenu("")} alt="main" />
+                    {/* <img src={require("../img/logo_main.png")} onClick={() => moveToMenu("")} alt="main" /> */}
                 </div>
                 <div className="brand_name">Portal Solution</div>
             </div>

@@ -34,9 +34,8 @@ function AgGridComponent(props) {
 
   }, []);
 
-  function onSelectionChanged() {
-    const selectedRows = gridApi.getSelectedRows();
-    console.log(selectedRows);
+  function onRowClicked(e) {
+    props.rowClicked(e.data); //부모의 rowClicked 함수 호출
   }
 
   return (
@@ -48,7 +47,7 @@ function AgGridComponent(props) {
       defaultColDef={defaultColDef} // Default Column Properties
       onGridReady={onGridReady}
       rowClassRules={rowClassRules}
-      onSelectionChanged={onSelectionChanged}
+      onRowClicked={onRowClicked}
 
     />
   );

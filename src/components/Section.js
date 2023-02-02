@@ -8,7 +8,7 @@ function Section(props) {
             <Routes>
                 <Route path="/" element={<MainPage />} />
                 <Route path="/contmgtlist" element={<ContMgtList />} />
-                <Route path="/contmgtview" element={<ContMgtView />} />
+                <Route path="/contmgtview/:price" element={<ContMgtView />} />
             </Routes>
         </section>
     );

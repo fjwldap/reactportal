@@ -1,8 +1,10 @@
 import React, { useState, } from 'react';
+import { useNavigate } from 'react-router-dom';
 import ContMgtSearchArea from "../components/ContMgtComponents/ContMgtSearchArea";
 import AgGridComponent from "../components/CommonComponents/AgGridComponent";
 
 function ContMgtList(props) {
+    let navigate = useNavigate();
     // Each Column Definition results in one Column.
     const [columnDefs, setColumnDefs] = useState([
         { field: 'make', filter: true },
@@ -23,12 +25,12 @@ function ContMgtList(props) {
         {
             'make': 'make',
             'model': 'model',
-            'price': 100,
+            'price': 200,
         },
         {
             'make': 'make',
             'model': 'model',
-            'price': 100,
+            'price': 300,
         }]
     ); // Set rowData to Array of Objects, one Object per Row
 
@@ -84,6 +86,11 @@ function ContMgtList(props) {
         },])
     }
 
+    function rowClicked(val) {
+        console.log(val);
+        navigate("/contmgtview/" + val.price)
+    }
+
     return (
         <div className="wrap">
             <ContMgtSearchArea getSearchData={getSearchData} />
@@ -93,7 +100,8 @@ function ContMgtList(props) {
 
                 <AgGridComponent
                     className="ag-grid bbs_link"
-                    columnDefs={columnDefs} rowData={rowData} />
+                    columnDefs={columnDefs} rowData={rowData}
+                    rowClicked={rowClicked} />
             </div>
         </div>
     );
