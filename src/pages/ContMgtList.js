@@ -88,11 +88,19 @@ function ContMgtList(props) {
 
     function rowClicked(val) {
         console.log(val);
-        navigate("/contmgtview/" + val.price)
+        navigate("/contmgtview/" + val.price);
     }
 
     return (
         <div className="wrap">
+            <div class="title_area">
+                <h1>신청관리</h1>
+                <span>
+                    Home {'>'} 메뉴 2 {'>'} 메뉴 2-1 {'>'}
+                    <strong>신청관리</strong>
+                </span>
+            </div>
+
             <ContMgtSearchArea getSearchData={getSearchData} />
 
             <div className="search_line"></div>

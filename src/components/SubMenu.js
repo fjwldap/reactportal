@@ -26,19 +26,19 @@ function SubMenu(props) {
                         <div className="area">
                             <ul className="m_gab01">
                                 <li>
-                                    <span> 계약 신청 </span>
+                                    <span> 메뉴 1-1 </span>
                                 </li>
-                                <li onClick={() => moveTo('')}>목록
+                                <li onClick={() => moveTo('')}>목록 X
                                 </li>
-                                <li onClick={() => moveTo('')}> 신청
+                                <li onClick={() => moveTo('')}> 신청 X
                                 </li>
                             </ul>
                             <ul>
                                 <li>
-                                    <span onClick={() => moveTo('')}>계약 목록</span>
+                                    <span onClick={() => moveTo('')}>메뉴 1-2</span>
                                 </li>
                                 <li onClick={() => moveTo('')}>
-                                    목록
+                                    목록 X
                                 </li>
                             </ul>
 
@@ -47,9 +47,9 @@ function SubMenu(props) {
                         <div className="area">
                             <ul className="m_gab02">
                                 <li>
-                                    <span >계약 신청 관리</span>
+                                    <span >메뉴 2-1</span>
                                 </li>
-                                <li onClick={() => moveTo('contmgtlist')}> 인터넷 신청 관리
+                                <li onClick={() => moveTo('contmgtlist')}> 신청 관리
                                 </li>
                             </ul>
                         </div>

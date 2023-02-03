@@ -12,10 +12,10 @@ function Footer(props) {
         <footer>
             <div className="area">
                 <div className="terms">
-
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </div>
                 <div className="copyright">
-                    &nbsp; &nbsp;COPYRIGHT(C) 2021 kt sat CORP. ALL
+                    &nbsp; &nbsp;COPYRIGHT(C) 2022 react portal ALL
                     RIGHT RESERVED.
                     <p>
                     </p>
@@ -29,9 +29,8 @@ function Footer(props) {
                             value={site}
                         >
                             <option value="">FAMILY SITE</option>
-                            <option value="http://kt.com">KT</option>
-                            <option value="https://www.ktsat.com">kt sat</option>
-                            <option value="https://www.ktds.com">kt ds</option>
+                            <option value="https://ko.reactjs.org/">리액트</option>
+                            <option value="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">getting started</option>
                         </select>
                     </div>
                 </div>

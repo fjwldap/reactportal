@@ -21,15 +21,18 @@ function Header(props) {
         <header>
             <div id="brand">
                 <div className="gap">
-                    {/* <img src={require("../img/logo_main.png")} onClick={() => moveToMenu("")} alt="main" /> */}
+                    <img src={require("../img/logo192.png")} onClick={() => moveToMenu("")} alt="main" />
                 </div>
-                <div className="brand_name">Portal Solution</div>
+                <div className="brand_name">React Portal</div>
+                <div class="profile">
+                    <img src={require("../img/logo192.png")} onClick={() => moveToMenu("")} alt="main" />
+                </div>
             </div>
             <div id="menu">
                 <div className="area">
                     <ul onMouseLeave={hideSubMenu}>
-                        <li onMouseOver={() => showSubMenu(1)} >  인터넷 </li>
-                        <li onMouseOver={() => showSubMenu(2)}  >  계약관리 </li>
+                        <li onMouseOver={() => showSubMenu(1)} > 메뉴 1 </li>
+                        <li onMouseOver={() => showSubMenu(2)} > 메뉴 2 </li>
                         <SubMenu no={no} />
                     </ul>
                 </div>
