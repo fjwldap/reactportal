@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import DatePickerComponent from '../CommonComponents/DatePickerComponent';
 import SelectBoxComponent from "../CommonComponents/SelectBoxComponent";
+import selectBoxOption from "../../assets/selectBoxOption.json";
 
 function ContMgtSearchArea(props) {
+    const searchDivCdList = selectBoxOption.optionsSearchDiv;
     const [selectedDivCd, setSelectedDivCd] = useState('');
     const [selectedSttusCd, setSelectedSttusCd] = useState('');
     const [selectedTlkPerd, setSelectedTlkPerd] = useState(1);
@@ -64,6 +66,10 @@ function ContMgtSearchArea(props) {
         else return false;
     }
 
+    function im(val) {
+        console.log(val)
+    }
+
     useEffect(() => {
         if (startDate == null || endDate == null)
             return;
@@ -91,13 +97,16 @@ function ContMgtSearchArea(props) {
                         <li className="title01">계약 구분</li>
                         <li>
                             <SelectBoxComponent value={selectedDivCd} getData={setSelectedDivCd}
-                                selectClass={'select_input'} width={505} />
+                                selectClass={'select_input'} width={505}
+                                list={searchDivCdList} />
                         </li>
                     </ul>
                     <ul>
                         <li className="title01_col">계약 상태</li>
                         <li>
-                            <SelectBoxComponent value={selectedSttusCd} getData={setSelectedSttusCd} selectClass={'select_input'} width={492} />
+                            <SelectBoxComponent value={selectedSttusCd} getData={setSelectedSttusCd}
+                                list={searchDivCdList}
+                                selectClass={'select_input'} width={492} />
                         </li>
                     </ul>
                 </div>

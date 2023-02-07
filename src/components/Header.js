@@ -24,7 +24,7 @@ function Header(props) {
                     <img src={require("../img/logo192.png")} onClick={() => moveToMenu("")} alt="main" />
                 </div>
                 <div className="brand_name">React Portal</div>
-                <div class="profile">
+                <div className="profile">
                     <img src={require("../img/logo192.png")} onClick={() => moveToMenu("")} alt="main" />
                 </div>
             </div>

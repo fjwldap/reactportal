@@ -93,7 +93,7 @@ function ContMgtList(props) {
 
     return (
         <div className="wrap">
-            <div class="title_area">
+            <div className="title_area">
                 <h1>신청관리</h1>
                 <span>
                     Home {'>'} 메뉴 2 {'>'} 메뉴 2-1 {'>'}
