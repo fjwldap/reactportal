@@ -1,31 +1,34 @@
 function CommonPopup(props) {
+  const popupObject = props.popupObject;
 
-
+  function closeModal(val) {
+    props.closeModal(val);
+  }
 
   return (
     <div>
 
-      <div class="popup360">
+      <div className="popup360">
         <h1>알림</h1>
 
         <article>
-          <div class="btn_area" >
-            <div style="font-size:20px;">
-              {{ popupmsg }}
+          <div className="btn_area" >
+            <div style={{ fontSize: "20px" }}>
+              {popupObject.popupMsg}
               <div>
                 &nbsp;&nbsp; </div>
             </div>
             <button
               type="button"
-              class="button_05"
-            // @click="[$emit('popup', true), $emit('AGREE')]"
+              className="button_05"
+              onClick={() => closeModal(true)}
             >확인
             </button>
             &nbsp;&nbsp;
             <button
               type="button"
-              class="button_04"
-            // @click="$emit('popup')"
+              className="button_04"
+              onClick={() => closeModal(false)}
             >취소
             </button>
           </div>

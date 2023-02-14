@@ -83,12 +83,21 @@ function ContMgtList(props) {
             'make': 'make',
             'model': 'model',
             'price': 100,
-        },])
+        },]);
+
+        props.showModal({
+            popupMsg: "ㅁㄴㅇㄻㄴㅇㄹ",
+            closeFunc: 'closeFunc'
+        });//모달 띄우기
     }
 
     function rowClicked(val) {
         console.log(val);
         navigate("/contmgtview/" + val.price);
+    }
+
+    function closeFunc() {
+        console.log("asdfasdf")
     }
 
     return (
