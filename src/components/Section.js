@@ -1,11 +1,12 @@
 import { ContMgtList, ContMgtView, MainPage } from "../routes";
 import { Route, Routes } from 'react-router-dom';
 import CommonPopup from "./CommonComponents/CommonPopup";
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 
 function Section(props) {
     const [isModalShow, setShowModal] = useState(false);
     const [popupObject, setPopupObject] = useState({});
+    const childRef = useRef();
 
     function closeModal(val) {
         console.log("닫기", val);
@@ -13,6 +14,7 @@ function Section(props) {
             console.log(popupObject);
             if (popupObject.closeFunc != null) {
                 //   popupObject.closeFunc()
+                childRef.current.closeFunc();//자식 함수 호출!
             }
         }
         setShowModal(false);//모달 닫기
@@ -28,8 +30,8 @@ function Section(props) {
             {isModalShow ? <CommonPopup closeModal={closeModal} popupObject={popupObject} /> : ''}
             <Routes >
                 <Route path="/" element={<MainPage />} />
-                <Route path="/contmgtlist" element={<ContMgtList showModal={showModal} />} />
-                <Route path="/contmgtview/:price" element={<ContMgtView />} />
+                <Route path="/contmgtlist" element={<ContMgtList showModal={showModal} ref={childRef} />} />
+                <Route path="/contmgtview/:price" element={<ContMgtView showModal={showModal} ref={childRef} />} />
             </Routes>
         </section>
     );

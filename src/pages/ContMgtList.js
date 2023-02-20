@@ -1,9 +1,14 @@
-import React, { useState, } from 'react';
+import React, { useState, forwardRef, useImperativeHandle } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContMgtSearchArea from "../components/ContMgtComponents/ContMgtSearchArea";
 import AgGridComponent from "../components/CommonComponents/AgGridComponent";
 
-function ContMgtList(props) {
+const ContMgtList = forwardRef((props, ref) => {
+
+    useImperativeHandle(ref, () => ({
+        closeFunc
+    }));//부모에서 호출 가능하도록..? 함수 이름..
+
     let navigate = useNavigate();
     // Each Column Definition results in one Column.
     const [columnDefs, setColumnDefs] = useState([
@@ -86,7 +91,7 @@ function ContMgtList(props) {
         },]);
 
         props.showModal({
-            popupMsg: "ㅁㄴㅇㄻㄴㅇㄹ",
+            popupMsg: "list 화면에서 팝업 호출",
             closeFunc: 'closeFunc'
         });//모달 띄우기
     }
@@ -97,7 +102,7 @@ function ContMgtList(props) {
     }
 
     function closeFunc() {
-        console.log("asdfasdf")
+        console.log("list 화면에서 팝업을 닫았다")
     }
 
     return (
@@ -122,6 +127,6 @@ function ContMgtList(props) {
             </div>
         </div>
     );
-}
+})
 
 export default ContMgtList;

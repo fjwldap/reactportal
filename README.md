@@ -1,5 +1,6 @@
 npm update
-npm start
+
+**npm start**
 
 <br/>
 
@@ -22,7 +23,7 @@ npm start
 
 <br/>
 
-style={{ }}
+### style={{ }}
 
 ""가 아니다..
 
@@ -38,8 +39,26 @@ routes 태그 안에 선언하고
       <Route path="/page3/:id" element={<PageComponent3 />} />
     </Routes>
 
-다른 [js파일](/src/routes/index.js)에 컴포넌트 리스트들 작성
+다른 [js파일](/src/routes/index.js)에 컴포넌트 리스트들 작성 하고 import
 
-파라미터는 :id로
+<br/>
+
+### 파라미터는 :id로
 
 받는 페이지에서는 useParams로 받음
+
+<br/>
+
+### 부모에서 자식함수를 호출할 때
+
+부모에서 > **useRef** 이용
+
+자식 컴포넌트에 ref={childRef} 설정
+
+자식에서 > **forwardRef, useImperativeHandle** 이용
+
+컴포넌트를 const 타입으로 = forwardRef((props, ref) => {} 선언
+
+useImperativeHandle(ref, () => ({
+부모에서 호출 가능하도록..? 함수 이름..
+}));

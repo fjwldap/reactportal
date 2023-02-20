@@ -1,3 +1,5 @@
+import '../../css/popup.css';
+
 function CommonPopup(props) {
   const popupObject = props.popupObject;
 
@@ -7,6 +9,7 @@ function CommonPopup(props) {
 
   return (
     <div>
+      <div className="cm_popup_overlay" onClick={() => closeModal(false)}></div>
 
       <div className="popup360">
         <h1>알림</h1>
