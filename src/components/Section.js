@@ -28,6 +28,8 @@ function Section(props) {
     return (
         <section>
             {isModalShow ? <CommonPopup closeModal={closeModal} popupObject={popupObject} /> : ''}
+
+
             <Routes >
                 <Route path="/" element={<MainPage />} />
                 <Route path="/contmgtlist" element={<ContMgtList showModal={showModal} ref={childRef} />} />

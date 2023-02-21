@@ -51,7 +51,7 @@ function ContMgtSearchArea(props) {
 
     //같은 달인지 확인
     function sameMonth(mon1, mon2) {
-        if (mon1 == null || mon2 == null) return false;
+        if (mon1 === null || mon2 === null) return false;
 
         mon1 = new Date(mon1);
         mon2 = new Date(mon2);
@@ -62,16 +62,12 @@ function ContMgtSearchArea(props) {
         let year2 = mon2.getFullYear();
         let month2 = mon2.getMonth();
 
-        if (year1 == year2 && month1 == month2) return true;
+        if (year1 === year2 && month1 === month2) return true;
         else return false;
     }
 
-    function im(val) {
-        console.log(val)
-    }
-
     useEffect(() => {
-        if (startDate == null || endDate == null)
+        if (startDate === null || endDate === null)
             return;
 
         let today = new Date();

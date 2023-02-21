@@ -43,6 +43,21 @@ const ContMgtList = forwardRef((props, ref) => {
         // 검색조건 가져오기
         console.log(value);
         //검색하기 rowdata set
+
+
+        props.showModal({
+            popupMsg: "list 화면에서 팝업 호출",
+            closeFunc: 'closeFunc'
+        });//모달 띄우기
+    }
+
+    function rowClicked(val) {
+        console.log(val);
+        navigate("/contmgtview/" + val.price);
+    }
+
+    function closeFunc() {
+        console.log("list 화면에서 팝업을 닫았다")
         setRowData([{
             'make': 'make',
             'model': 'model',
@@ -89,20 +104,6 @@ const ContMgtList = forwardRef((props, ref) => {
             'model': 'model',
             'price': 100,
         },]);
-
-        props.showModal({
-            popupMsg: "list 화면에서 팝업 호출",
-            closeFunc: 'closeFunc'
-        });//모달 띄우기
-    }
-
-    function rowClicked(val) {
-        console.log(val);
-        navigate("/contmgtview/" + val.price);
-    }
-
-    function closeFunc() {
-        console.log("list 화면에서 팝업을 닫았다")
     }
 
     return (

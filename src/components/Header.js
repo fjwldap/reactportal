@@ -33,7 +33,7 @@ function Header(props) {
                     <ul onMouseLeave={hideSubMenu}>
                         <li onMouseOver={() => showSubMenu(1)} > 메뉴 1 </li>
                         <li onMouseOver={() => showSubMenu(2)} > 메뉴 2 </li>
-                        <SubMenu no={no} />
+                        <SubMenu no={no} hideSubMenu={hideSubMenu} />
                     </ul>
                 </div>
             </div>
