@@ -15,7 +15,7 @@ function Footer(props) {
                     ABCDEFGHIJKLMNOPQRSTUVWXYZ
                 </div>
                 <div className="copyright">
-                    &nbsp; &nbsp;COPYRIGHT(C) 2022 react portal ALL
+                    &nbsp; &nbsp;COPYRIGHT(C) 2023 react portal ALL
                     RIGHT RESERVED.
                     <p>
                     </p>
