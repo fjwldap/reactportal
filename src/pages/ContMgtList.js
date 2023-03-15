@@ -1,7 +1,8 @@
-import React, { useState, forwardRef, useImperativeHandle } from 'react';
+import React, { useState, forwardRef, useEffect, useImperativeHandle } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ContMgtSearchArea from "../components/ContMgtComponents/ContMgtSearchArea";
 import AgGridComponent from "../components/CommonComponents/AgGridComponent";
+import PagingArea from '../components/CommonComponents/PagingArea';
 
 const ContMgtList = forwardRef((props, ref) => {
 
@@ -38,6 +39,8 @@ const ContMgtList = forwardRef((props, ref) => {
             'price': 300,
         }]
     ); // Set rowData to Array of Objects, one Object per Row
+    const [pageNum, setPageNum] = useState(1);
+    const [totalPages, setTotalPages] = useState(23);
 
     function getSearchData(value) {
         // 검색조건 가져오기
@@ -51,6 +54,56 @@ const ContMgtList = forwardRef((props, ref) => {
         });//모달 띄우기
     }
 
+    function getData() {
+        // 데이터 가져오기 호출
+        setRowData([{
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 1,
+        },
+        {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 2,
+        }, {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 3,
+        },
+        {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 4,
+        }, {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 5,
+        },
+        {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 6,
+        }, {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 7,
+        },
+        {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 8,
+        }, {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 9,
+        },
+        {
+            'make': 'make',
+            'model': 'model',
+            'price': pageNum * 10,
+        },]);
+    }
+
     function rowClicked(val) {
         console.log(val);
         navigate("/contmgtview/" + val.price);
@@ -58,53 +111,21 @@ const ContMgtList = forwardRef((props, ref) => {
 
     function closeFunc() {
         console.log("list 화면에서 팝업을 닫았다")
-        setRowData([{
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },
-        {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        }, {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },
-        {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        }, {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },
-        {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        }, {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },
-        {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        }, {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },
-        {
-            'make': 'make',
-            'model': 'model',
-            'price': 100,
-        },]);
+        getData();//팝업 닫고 데이터 가져오기
+
+        //페이지정보 set
+        setPageData();
     }
+
+    function setPageData() {
+        // 뭐 total pages, page unit, pageNum
+    }
+
+    useEffect(() => {
+        // 페이지가 바뀌면 data를 다시 가져온다.
+        console.log("==========", pageNum);
+        getData();
+    }, [pageNum]);
 
     return (
         <div className="wrap">
@@ -126,6 +147,8 @@ const ContMgtList = forwardRef((props, ref) => {
                     columnDefs={columnDefs} rowData={rowData}
                     rowClicked={rowClicked} />
             </div>
+
+            <PagingArea totalPages={totalPages} pageNum={pageNum} setPage={setPageNum} />
         </div>
     );
 })

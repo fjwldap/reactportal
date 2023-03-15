@@ -59,6 +59,43 @@ routes 태그 안에 선언하고
 
 컴포넌트를 const 타입으로 = forwardRef((props, ref) => {} 선언
 
-useImperativeHandle(ref, () => ({
-부모에서 호출 가능하도록..? 함수 이름..
-}));
+    const ContMgtList = forwardRef((props, ref) => {
+
+    useImperativeHandle(ref, () => ({
+    부모에서 호출 가능하도록..? 함수 이름..
+    }));
+
+<br/>
+
+### onClick에서
+
+    onClick={() => 함수(param)}
+
+변수가 있으면 () => 해줘야 하남
+
+<br/>
+
+### for문 대신에
+
+return문 안에
+
+    arr.map(()=>(
+
+    ))
+
+or
+
+return 밖에서
+
+    const rendering = () => {
+      const result=[];
+      for(  ; ; ) {
+        result.push로 넣고
+      }
+
+      return result;
+    }
+
+    return문에
+
+    <div> {rendering()} </div>
